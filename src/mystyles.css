@@ -1,0 +1,185 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Gambetta-Light;
+}
+
+@font-face {
+    font-family: Gambetta-Light;
+    src: url('../fonts/Gambetta-Light.eot');
+    src: url('../fonts/Gambetta-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gambetta-Light.woff2') format('woff2'),
+        url('../fonts/Gambetta-Light.woff') format('woff'),
+        url('../fonts/Gambetta-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Gambetta-LightItalic;
+    src: url('../fonts/Gambetta-LightItalic.eot');
+    src: url('../fonts/Gambetta-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gambetta-LightItalic.woff2') format('woff2'),
+        url('../fonts/Gambetta-LightItalic.woff') format('woff'),
+        url('../fonts/Gambetta-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: PublicSans-SemiBold;
+    src: url('../fonts/PublicSans-SemiBold.eot');
+    src: url('../fonts/PublicSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PublicSans-SemiBold.woff') format('woff'),
+        url('../fonts/PublicSans-SemiBold.ttf') format('truetype');
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+#left-panel {
+    width: 50vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    z-index: 1;
+}
+
+#left-panel-content {
+    font-family: "Gambetta-Light";
+    font-size: 1.8rem;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-panel-text-container {
+    width: 30vw;
+}
+
+#right-panel {
+    width: 50vw;
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+#right-panel-content {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 2rem;
+}
+
+#home-button {
+    font-family: PublicSans-SemiBold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+#close-link {
+    cursor: pointer;
+    color: darkblue;
+    font-size: 16px;
+}
+
+.enlarged-view {
+    display: none;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    left: 50vw;
+    /* transform: translate(-50%, -50%); */
+    z-index: 2;
+    width: 50vw;
+    height: 70vh;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+}
+
+.enlarged-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.enlarged-image {
+    width: 85%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.description {
+    color: white;
+    text-align: left;
+    display: none;
+}
+
+.grid-item {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    /* height: 8rem; */
+    object-fit: contain;
+    cursor: pointer;
+}
+
+#close-link {
+    color: black;
+    font-size: 1.15rem;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.navigation-link {
+    cursor: pointer;
+    font-size: 1.15rem;
+    /* margin: 1rem; */
+}
+
+.home-link {
+    color: white;
+    font-size: 1.15rem;
+    text-decoration: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+}
+
+.links-container.hidden {
+    display: none;
+}
+
+.nav-controls-container {
+    margin-top: 2rem;
+    height: fit-content;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    font-family: Gambetta-LightItalic;
+}
